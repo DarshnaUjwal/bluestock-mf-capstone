@@ -17,7 +17,7 @@ for fund_name, code in scheme_codes.items():
 
     url = f"https://api.mfapi.in/mf/{code}"
 
-    response = requests.get(url)
+    response = requests.get(url, timeout=10)
 
     if response.status_code == 200:
 
